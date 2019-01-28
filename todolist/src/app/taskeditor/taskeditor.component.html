@@ -1,0 +1,23 @@
+<h2 style="text-align: center;">Modification de la tâche #{{id}}</h2><br>
+<div class="card col-md-6 offset-3">
+  <div class="card-body">
+	<form class="col-12">
+	  <div class="form-group">
+	    <label for="title">Titre</label>
+	    <input class="form-control" id="title" placeholder="Entrer le titre" [value]="task.title">
+	  </div>
+	  <div class="form-group">
+	    <label for="description">Description</label>
+	    <textarea class="form-control" id="description" placeholder="Entrer la description" cols="10" rows="12" [value]="task.description"></textarea>
+	  </div>
+	  <table cellpadding="5px" cellspacing="15px">
+		  <td><button type="submit" class="btn btn-success" (click)="validate()">Envoyer</button></td>
+		  <td><button type="submit" class="btn btn-danger" (click)="delete()">Supprimer</button></td>
+		  <td><button type="submit" class="btn btn-info" (click)="cancel()">Retour</button></td>
+	  </table>
+	</form>
+   </div>
+</div>
+
+
+

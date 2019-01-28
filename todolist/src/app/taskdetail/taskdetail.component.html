@@ -1,0 +1,23 @@
+<div><br>
+	<h2 style="margin-left: 10px;">{{task.title}} <span class="badge badge-secondary" style="margin-left: 10px;">{{task.id}}</span></h2>
+</div><br>
+
+<div class="progress" style="width: 70%; margin-left: 10px;">
+  <div id="bar" class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"></div>
+</div><br>
+
+<div class="container container-fluid" style="width: 70%; margin-left: -10px;">
+	<table cellpadding="5px" cellspacing="5px">
+	<td><button name="A traiter" type="button" class="btn btn-danger btn-sm" (click)= 'showProgress("A traiter")'>A traiter</button></td>	
+	<td><button name="En cours" type="button" class="btn btn-warning btn-sm" (click)= 'showProgress("En cours")'>En cours</button></td>
+	<td><button name="Terminé" type="button" class="btn btn-success btn-sm" (click)= 'showProgress("Terminé")'>Terminé</button></td>
+	</table>
+</div><br>
+<div class="card col-md-8" style="margin-left: 5px;">
+	<div class="card-body">
+		<h5 class="card-title list-group-item" style="text-align: center; background: #ffefe0;">{{task.title}}</h5>
+		<p style="margin-left: 12px;">{{task.description}}</p><br>
+	</div>
+</div><br>
+
+<button [routerLink]="['/tasked', task.id]" type="button" class="btn btn-info" style="margin-left: 10px;">Modifier</button>
